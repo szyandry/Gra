@@ -16,5 +16,10 @@ namespace Gra
         {
             InitializeComponent();
         }
+
+        private void lblExit_MouseEnter(object sender, EventArgs e)
+        {
+
+        }
     }
 }
