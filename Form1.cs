@@ -19,7 +19,33 @@ namespace Gra
 
         private void lblExit_MouseEnter(object sender, EventArgs e)
         {
+            lblExit.Font = new Font("Snap ITC", 42);
+        }
+        private void lblExit_MouseLeave(object sender, EventArgs e)
+        {
+            lblExit.Font = new Font("Snap ITC", 36);
 
+        }
+
+        private void lblStart_MouseEnter(object sender, EventArgs e)
+        {
+            lblStart.Font = new Font("Snap ITC", 42);
+        }
+        private void lblStart_MouseLeave(object sender, EventArgs e)
+        {
+            lblStart.Font = new Font("Snap ITC",36);
+
+        }
+
+        private void lblExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void Draw(object sender, PaintEventArgs e)
+        {
+            this.DoubleBuffered = true;
+            Graphics = e.Graphics;
         }
     }
 }

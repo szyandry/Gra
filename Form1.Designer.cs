@@ -65,17 +65,21 @@
             this.lblStart.Size = new System.Drawing.Size(43, 13);
             this.lblStart.TabIndex = 3;
             this.lblStart.Text = "START";
+            this.lblStart.MouseEnter += new System.EventHandler(this.lblStart_MouseEnter);
+            this.lblStart.MouseLeave += new System.EventHandler(this.lblStart_MouseEnter);
             // 
             // lblExit
             // 
             this.lblExit.AutoSize = true;
             this.lblExit.BackColor = System.Drawing.Color.Transparent;
-            this.lblExit.Location = new System.Drawing.Point(12, 61);
+            this.lblExit.Location = new System.Drawing.Point(13, 114);
             this.lblExit.Name = "lblExit";
             this.lblExit.Size = new System.Drawing.Size(31, 13);
             this.lblExit.TabIndex = 4;
             this.lblExit.Text = "EXIT";
+            this.lblExit.Click += new System.EventHandler(this.lblExit_Click);
             this.lblExit.MouseEnter += new System.EventHandler(this.lblExit_MouseEnter);
+            this.lblExit.MouseLeave += new System.EventHandler(this.lblExit_MouseEnter);
             // 
             // Form1
             // 
@@ -90,6 +94,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Paint += new System.Windows.Forms.PaintEventHandler(this.Draw);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
