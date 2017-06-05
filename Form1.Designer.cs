@@ -28,10 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.lblStart = new System.Windows.Forms.Label();
             this.lblExit = new System.Windows.Forms.Label();
+            this.Czas = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -65,6 +67,7 @@
             this.lblStart.Size = new System.Drawing.Size(43, 13);
             this.lblStart.TabIndex = 3;
             this.lblStart.Text = "START";
+            this.lblStart.Click += new System.EventHandler(this.lblStart_Click);
             this.lblStart.MouseEnter += new System.EventHandler(this.lblStart_MouseEnter);
             this.lblStart.MouseLeave += new System.EventHandler(this.lblStart_MouseEnter);
             // 
@@ -80,6 +83,11 @@
             this.lblExit.Click += new System.EventHandler(this.lblExit_Click);
             this.lblExit.MouseEnter += new System.EventHandler(this.lblExit_MouseEnter);
             this.lblExit.MouseLeave += new System.EventHandler(this.lblExit_MouseEnter);
+            // 
+            // Czas
+            // 
+            this.Czas.Interval = 1;
+            this.Czas.Tick += new System.EventHandler(this.Czas_Tick);
             // 
             // Form1
             // 
@@ -107,6 +115,7 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label lblStart;
         private System.Windows.Forms.Label lblExit;
+        private System.Windows.Forms.Timer Czas;
     }
 }
 

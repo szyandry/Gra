@@ -11,7 +11,13 @@ using System.Windows.Forms;
 namespace Gra
 {
     public partial class Form1 : Form
+        
+ 
     {
+        public static bool START = true;
+        bool up, left;
+            Sprite[] sprites = new Sprite[10];
+
         public Form1()
         {
             InitializeComponent();
@@ -42,10 +48,30 @@ namespace Gra
             Application.Exit();
         }
 
+        private void Czas_Tick(object sender, EventArgs e)
+        {
+            if (START)
+                this.Refresh();
+        }
+
+        private void lblStart_Click(object sender, EventArgs e)
+        {
+            Czas.Start();
+            START = true;
+        }
+
         private void Draw(object sender, PaintEventArgs e)
         {
             this.DoubleBuffered = true;
-            Graphics = e.Graphics;
+            Graphics g= e.Graphics;
+            foreach (Sprite s in sprites)
+            {
+                if (s != null)
+                {
+                    if (s.Show == true)
+                        g.DrawImage(s.CurrentSprite, new Rectangle(s._x, s._y, s._width, s._height));
+                }
+            }
         }
     }
 }

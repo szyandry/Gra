@@ -19,6 +19,16 @@ namespace Gra
             _y = y;
             _width = CurrentSprite.Width;
             _height = CurrentSprite.Height;
+            Show = true;
+        }
+        public Sprite(string filename, int x, int y, int w , int h)
+        {
+            CurrentSprite = new Bitmap(filename);
+            _x = x;
+            _y = y;
+            _height = h;
+            _width = w;
+            Show = true;
         }
     }
 }
