@@ -22,6 +22,18 @@ namespace Gra
         {
             InitializeComponent();
         }
+        public void loadSprite(string file , int num , int x , int y)
+        {
+            sprites[num] = new Sprite(file , x , y);
+        }
+        public void loadSprite(string file, int num, int x, int y, int w , int h)
+        {
+            sprites[num] = new Sprite(file, x, y , w, h);
+        }
+        public void SetupGame()
+        {
+
+        }
 
         private void lblExit_MouseEnter(object sender, EventArgs e)
         {
